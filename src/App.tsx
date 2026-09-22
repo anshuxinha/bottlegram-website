@@ -40,8 +40,15 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <a href="#" className="text-2xl font-serif font-bold text-primary italic tracking-tight">
-            Stroma
+          <a href="#" className="flex items-center gap-3 group">
+            <img 
+              src="/logo.png" 
+              alt="Stroma Logo" 
+              className="w-10 h-10 rounded-xl object-cover shadow-md group-hover:scale-105 transition-transform" 
+            />
+            <span className="text-2xl font-serif font-bold text-primary italic tracking-tight">
+              Stroma
+            </span>
           </a>
           <div className="hidden md:flex items-center gap-6">
             {["Curriculum", "Dashboard", "Webinars"].map((item) => (
@@ -57,6 +64,9 @@ const Navbar = () => {
         </div>
 
         <div className="hidden md:flex items-center gap-6">
+          <a href="/privacy" className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors">
+            Privacy
+          </a>
           <a href="mailto:anshuxinha@gmail.com" className="text-sm font-medium text-on-surface hover:text-primary transition-colors">
             Contact
           </a>
@@ -82,14 +92,19 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden absolute top-full left-0 right-0 bg-surface border-t border-outline-variant p-6 flex flex-col gap-4 shadow-xl"
         >
-          {["Curriculum", "Dashboard", "Webinars", "Contact"].map((item) => (
+          {["Curriculum", "Dashboard", "Webinars", "Privacy", "Contact"].map((item) => (
             <a 
               key={item} 
-              href={item === "Dashboard" ? "#dashboard" : item === "Contact" ? "mailto:anshuxinha@gmail.com" : `#${item.toLowerCase()}`} 
+              href={
+                item === "Dashboard" ? "#dashboard" : 
+                item === "Contact" ? "mailto:anshuxinha@gmail.com" : 
+                item === "Privacy" ? "/privacy" : 
+                `#${item.toLowerCase()}`
+              } 
               className="text-lg font-medium text-on-surface"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {item}
+              {item === "Privacy" ? "Privacy Policy" : item}
             </a>
           ))}
           <button className="primary-gradient text-on-primary px-6 py-3 rounded-full text-center font-semibold mt-2">
@@ -428,13 +443,26 @@ const Footer = () => {
     <footer className="py-12 px-6 border-t border-outline-variant">
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div>
-          <div className="text-2xl font-serif font-bold text-primary italic mb-2">Stroma</div>
-          <p className="text-xs text-on-surface-variant font-medium uppercase tracking-widest">
-            © 2026 Stroma Education Excellence. All rights reserved.
+          <div className="flex items-center gap-3 mb-2">
+            <img 
+              src="/logo.png" 
+              alt="Stroma Logo" 
+              className="w-7 h-7 rounded-lg object-cover" 
+            />
+            <div className="text-2xl font-serif font-bold text-primary italic">Stroma</div>
+          </div>
+          <p className="text-xs text-on-surface-variant font-medium tracking-wide">
+            A product of Bottlegram Health · © 2026 All rights reserved.
           </p>
         </div>
-        <div className="flex flex-wrap justify-center gap-6">
-          {["Student Privacy", "Library Terms", "Academic Integrity", "Support"].map((link) => (
+        <div className="flex flex-wrap justify-center gap-6 items-center">
+          <a 
+            href="/privacy" 
+            className="text-xs font-bold uppercase tracking-widest text-primary hover:underline transition-all"
+          >
+            Privacy Policy
+          </a>
+          {["Library Terms", "Academic Integrity", "Support"].map((link) => (
             <a 
               key={link} 
               href="#" 
