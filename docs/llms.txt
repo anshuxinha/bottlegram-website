@@ -17,6 +17,12 @@ Stroma is published by Bottlegram Health (Anshuman Sinha). The public site is ht
 - [Disaster management](https://bottlegramhealth.in/notes/disaster-management/): the cycle and triage colours
 - [Health education](https://bottlegramhealth.in/notes/health-education/): communication, IEC, and behaviour change
 - [Health planning](https://bottlegramhealth.in/notes/health-planning/): the planning cycle, monitoring, and evaluation
+- [National immunisation schedule](https://bottlegramhealth.in/notes/national-immunisation-schedule/): the government ages and vaccines, from the Ministry citizen note
+- [Man and medicine](https://bottlegramhealth.in/notes/man-and-medicine/): how public health changed
+- [Sustainable development goals](https://bottlegramhealth.in/notes/sustainable-development-goals/): Goal 3
+- [International health](https://bottlegramhealth.in/notes/international-health/): WHO and the International Health Regulations
+- [Health information](https://bottlegramhealth.in/notes/health-information/): census, registration, surveys, facility reports
+- [About](https://bottlegramhealth.in/about/): Dr. Anshuman Sinha
 
 ## Product
 
