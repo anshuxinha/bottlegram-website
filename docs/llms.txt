@@ -10,9 +10,13 @@ Stroma is published by Bottlegram Health (Anshuman Sinha). The public site is ht
 - [Pearl index](https://bottlegramhealth.in/notes/pearl-index/): formula and a worked example
 - [Screening calculations](https://bottlegramhealth.in/notes/screening-sensitivity-specificity/): sensitivity, specificity, PPV, NPV
 - [Park, Marrow, review books, and Stroma](https://bottlegramhealth.in/notes/community-medicine-apps-mbbs-md/): MBBS and MD comparison
-- [Park textbook notes for MBBS](https://bottlegramhealth.in/notes/park-textbook-alternative/): what Park is for, what short notes are for, and what Stroma includes
 - [How to study Community Medicine](https://bottlegramhealth.in/notes/how-to-study-community-medicine/): revision order before a prof
-- [PSM topics for MBBS exams](https://bottlegramhealth.in/notes/psm-topics-for-mbbs-exams/): the topic map, without copied tables or doses
+- [PSM notes for MBBS](https://bottlegramhealth.in/notes/psm-topics-for-mbbs-exams/): the topic map
+- [K Park notes](https://bottlegramhealth.in/notes/park-textbook-alternative/): what the textbook is for, and what the notes are for
+- [Biomedical waste](https://bottlegramhealth.in/notes/biomedical-waste-management/): the four colour bags
+- [Disaster management](https://bottlegramhealth.in/notes/disaster-management/): the cycle and triage colours
+- [Health education](https://bottlegramhealth.in/notes/health-education/): communication, IEC, and behaviour change
+- [Health planning](https://bottlegramhealth.in/notes/health-planning/): the planning cycle, monitoring, and evaluation
 - [Pricing](https://bottlegramhealth.in/pricing.md): India App Store prices on 8 October 2026
 
 ## Product
