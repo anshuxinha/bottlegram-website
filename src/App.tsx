@@ -15,10 +15,18 @@ import {
   Menu, 
   X,
   Clock,
-  Globe,
-  WifiOff
+  Globe
 } from "lucide-react";
 import { useState, useEffect } from "react";
+
+const APP_STORE_URL = "https://apps.apple.com/in/app/stroma-app/id6767763106";
+
+const navLinks = [
+  { label: "Notes", href: "/notes/" },
+  { label: "Curriculum", href: "#curriculum" },
+  { label: "Dashboard", href: "#dashboard" },
+  { label: "Webinars", href: "#webinars" },
+];
 
 // --- Components ---
 
@@ -40,24 +48,24 @@ const Navbar = () => {
     >
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between">
         <div className="flex items-center gap-8">
-          <a href="#" className="flex items-center gap-3 group">
+          <a href="/" className="flex items-center gap-3 group">
             <img 
               src="/logo.png" 
               alt="Stroma Logo" 
               className="w-10 h-10 rounded-xl object-cover shadow-md group-hover:scale-105 transition-transform" 
             />
-            <span className="text-2xl font-serif font-bold text-primary italic tracking-tight">
+            <span className="text-2xl font-wordmark font-medium text-primary uppercase tracking-[0.02em]">
               Stroma
             </span>
           </a>
           <div className="hidden md:flex items-center gap-6">
-            {["Curriculum", "Dashboard", "Webinars"].map((item) => (
+            {navLinks.map((item) => (
               <a 
-                key={item} 
-                href={item === "Dashboard" ? "#dashboard" : `#${item.toLowerCase()}`} 
+                key={item.label} 
+                href={item.href} 
                 className="text-sm font-medium text-on-surface-variant hover:text-primary transition-colors"
               >
-                {item}
+                {item.label}
               </a>
             ))}
           </div>
@@ -70,10 +78,10 @@ const Navbar = () => {
           <a href="mailto:anshuxinha@gmail.com" className="text-sm font-medium text-on-surface hover:text-primary transition-colors">
             Contact
           </a>
-          <button className="primary-gradient text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:opacity-90 transition-opacity flex items-center gap-2">
-            Download
+          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="primary-gradient text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+            Get the app
             <Download size={16} />
-          </button>
+          </a>
         </div>
 
         <button 
@@ -92,24 +100,25 @@ const Navbar = () => {
           animate={{ opacity: 1, y: 0 }}
           className="md:hidden absolute top-full left-0 right-0 bg-surface border-t border-outline-variant p-6 flex flex-col gap-4 shadow-xl"
         >
-          {["Curriculum", "Dashboard", "Webinars", "Privacy", "Contact"].map((item) => (
+          {navLinks.map((item) => (
             <a 
-              key={item} 
-              href={
-                item === "Dashboard" ? "#dashboard" : 
-                item === "Contact" ? "mailto:anshuxinha@gmail.com" : 
-                item === "Privacy" ? "/privacy" : 
-                `#${item.toLowerCase()}`
-              } 
+              key={item.label} 
+              href={item.href} 
               className="text-lg font-medium text-on-surface"
               onClick={() => setIsMobileMenuOpen(false)}
             >
-              {item === "Privacy" ? "Privacy Policy" : item}
+              {item.label}
             </a>
           ))}
-          <button className="primary-gradient text-on-primary px-6 py-3 rounded-full text-center font-semibold mt-2">
-            Download App
-          </button>
+          <a href="/privacy" className="text-lg font-medium text-on-surface" onClick={() => setIsMobileMenuOpen(false)}>
+            Privacy Policy
+          </a>
+          <a href="mailto:anshuxinha@gmail.com" className="text-lg font-medium text-on-surface" onClick={() => setIsMobileMenuOpen(false)}>
+            Contact
+          </a>
+          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="primary-gradient text-on-primary px-6 py-3 rounded-full text-center font-semibold mt-2">
+            Get the app
+          </a>
         </motion.div>
       )}
     </nav>
@@ -125,45 +134,34 @@ const Hero = () => {
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8 }}
         >
+          <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">Community Medicine</p>
           <h1 className="text-5xl md:text-7xl font-serif font-bold text-on-surface leading-[1.1] mb-6">
-            The Living <br />
-            Curriculum for <br />
-            <span className="text-primary italic">Community Medicine.</span>
+            One library for <br />
+            MBBS and <br />
+            <span className="text-primary italic">MD.</span>
           </h1>
           <p className="text-lg text-on-surface-variant max-w-lg mb-10 leading-relaxed">
-            Stop buying new textbooks every year. Master public health with real-time updates, webinars, and a comprehensive digital library designed for students.
+            Stroma is the Community Medicine app for undergraduate exams and for the residency. The same library holds short notes and long answers for MBBS, and a resident course, survey tools, and calculators for MD.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <button 
-              className="primary-gradient text-on-primary px-8 py-4 rounded-full font-semibold shadow-xl hover:scale-105 transition-transform"
-              aria-label="Download the app"
+            <a
+              href={APP_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="primary-gradient text-on-primary px-8 py-4 rounded-full font-semibold shadow-xl hover:scale-105 transition-transform text-center"
             >
-              Download
-            </button>
+              Get Stroma on the App Store
+            </a>
             <a 
-              href="mailto:anshuxinha@gmail.com"
+              href="/notes/"
               className="bg-surface-container-lowest text-on-surface px-8 py-4 rounded-full font-semibold editorial-shadow hover:bg-surface-container-low transition-colors text-center"
-              aria-label="Contact us"
             >
-              Contact
+              Read the guides
             </a>
           </div>
-          <div className="flex items-center gap-4">
-            <div className="flex -space-x-3">
-              {[1, 2, 3].map((i) => (
-                <img 
-                  key={i}
-                  src={`https://i.pravatar.cc/100?u=${i}`}
-                  alt="User"
-                  className="w-10 h-10 rounded-full border-2 border-surface"
-                  referrerPolicy="no-referrer"
-                />
-              ))}
-            </div>
-            <p className="text-xs font-bold uppercase tracking-widest text-on-surface-variant">
-              Empowering 50,000+ Med Students
-            </p>
-          </div>
+          <p className="text-sm text-on-surface-variant max-w-lg leading-relaxed">
+            Free to download. Pro access is an in-app purchase. Rated 5.0 from 17 ratings on the India App Store, checked 8 October 2026.
+          </p>
         </motion.div>
 
         <motion.div
@@ -177,7 +175,7 @@ const Hero = () => {
               {/* Mock App Content */}
               <div className="p-6">
                 <div className="flex justify-between items-center mb-8">
-                  <div className="text-primary font-serif italic font-bold">Stroma</div>
+                  <div className="text-primary font-wordmark font-medium uppercase tracking-[0.02em]">Stroma</div>
                   <div className="w-8 h-8 rounded-full bg-surface-container-low flex items-center justify-center">
                     <div className="w-2 h-2 rounded-full bg-primary" />
                   </div>
@@ -236,8 +234,8 @@ const Features = () => {
   const features = [
     {
       icon: <BookOpen className="text-primary" />,
-      title: "Curriculum-Aligned Library",
-      description: "A comprehensive digital library covering your entire Community Medicine syllabus, from epidemiology to social medicine.",
+      title: "A library for both stages",
+      description: "MBBS gets short notes, long answers, and exam tips. MD gets a resident course on top of the same Community Medicine library.",
       bgColor: "bg-purple-50"
     },
     {
@@ -260,7 +258,7 @@ const Features = () => {
         <div className="mb-16">
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">Modern Learning</p>
           <h2 className="text-4xl md:text-5xl font-serif font-bold text-on-surface max-w-2xl leading-tight">
-            Built for the next generation of public health leaders.
+            Built for MBBS students and MD residents.
           </h2>
         </div>
         <div className="grid md:grid-cols-3 gap-8">
@@ -289,18 +287,18 @@ const TextbookSection = () => {
   const points = [
     {
       icon: <Clock className="text-primary" />,
-      title: "Weekly Updates",
-      description: "Guidelines change fast. We update our content weekly to ensure you're always studying the most current protocols."
+      title: "Updates between editions",
+      description: "Park changes when a new edition is printed. The app adds notes, exam tips, and survey tools in App Store updates. The June 2026 update added an NFHS-5 and NFHS-6 comparison."
     },
     {
       icon: <CheckCircle2 className="text-primary" />,
-      title: "Curriculum-Centric",
-      description: "Mapped directly to your university's curriculum for Community Medicine and Public Health rotations."
+      title: "MBBS answers, MD course",
+      description: "The 22 July 2026 update added short notes, long answers, and exam tips for several chapters. The 13 June 2026 update added a course for Community Medicine residents."
     },
     {
-      icon: <WifiOff className="text-primary" />,
-      title: "Offline Field Access",
-      description: "Download materials for use during rural community postings where internet connectivity may be limited."
+      icon: <Globe className="text-primary" />,
+      title: "Biostatistics on the phone",
+      description: "Calculators sit next to the notes, so a formula is not stuck in a chapter you cannot find during a posting."
     }
   ];
 
@@ -324,9 +322,12 @@ const TextbookSection = () => {
         </div>
         <div>
           <p className="text-xs font-bold uppercase tracking-[0.2em] text-primary mb-4">Dynamic Learning</p>
-          <h2 className="text-4xl md:text-5xl font-serif font-bold text-on-surface mb-12 leading-tight">
-            The only textbook you'll ever need.
+          <h2 className="text-4xl md:text-5xl font-serif font-bold text-on-surface mb-6 leading-tight">
+            Undergraduates and residents use it differently.
           </h2>
+          <p className="text-on-surface-variant leading-relaxed mb-12">
+            If you are in MBBS, the college book is still Park, and the short notes are the way through a prof. If you are in MD Community Medicine, the resident course and the survey tools sit on the same library. <a href="/notes/community-medicine-apps-mbbs-md/" className="text-primary font-semibold hover:underline">See how that compares with Park, Marrow, and the review books</a>.
+          </p>
           <div className="space-y-10">
             {points.map((point, idx) => (
               <div key={idx} className="flex gap-6">
@@ -366,8 +367,7 @@ const ExpertsSection = () => {
             className="bg-surface-container-lowest p-8 rounded-xl editorial-shadow relative overflow-hidden"
           >
             <div className="flex items-center gap-3 mb-6">
-              <span className="bg-red-100 text-red-600 text-[10px] font-bold px-2 py-1 rounded uppercase">Live Seminar</span>
-              <span className="text-[10px] text-on-surface-variant font-medium">1,250 students attending</span>
+              <span className="bg-red-100 text-red-600 text-[10px] font-bold px-2 py-1 rounded uppercase">Seminar</span>
             </div>
             <h3 className="text-2xl font-serif font-bold text-on-surface mb-2">
               BCBR Excellence Class
@@ -411,15 +411,15 @@ const CTASection = () => {
       >
         <div className="relative z-10">
           <h2 className="text-4xl md:text-6xl font-serif font-bold mb-8 leading-tight">
-            Ready to master Community <br className="hidden md:block" /> Medicine?
+            Community Medicine <br className="hidden md:block" /> for the exam in front of you.
           </h2>
           <p className="text-xl text-on-primary/80 mb-12 max-w-2xl mx-auto">
-            Join Stroma today and gain access to the most comprehensive, up-to-date digital resource for your medical studies.
+            Get the Stroma library on iPhone and iPad. The download is free. Pro access, including the longer notes, is an in-app purchase.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
-              Download
-            </button>
+            <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
+              Get Stroma on the App Store
+            </a>
             <a 
               href="mailto:anshuxinha@gmail.com"
               className="border-2 border-on-primary/30 text-on-primary px-10 py-5 rounded-full font-bold hover:bg-on-primary/10 transition-colors"
@@ -449,28 +449,28 @@ const Footer = () => {
               alt="Stroma Logo" 
               className="w-7 h-7 rounded-lg object-cover" 
             />
-            <div className="text-2xl font-serif font-bold text-primary italic">Stroma</div>
+            <div className="text-2xl font-wordmark font-medium text-primary uppercase tracking-[0.02em]">Stroma</div>
           </div>
           <p className="text-xs text-on-surface-variant font-medium tracking-wide">
             A product of Bottlegram Health · © 2026 All rights reserved.
           </p>
         </div>
         <div className="flex flex-wrap justify-center gap-6 items-center">
+          <a href="/notes/" className="text-xs font-bold uppercase tracking-widest text-primary hover:underline transition-all">
+            Notes
+          </a>
           <a 
             href="/privacy" 
             className="text-xs font-bold uppercase tracking-widest text-primary hover:underline transition-all"
           >
             Privacy Policy
           </a>
-          {["Library Terms", "Academic Integrity", "Support"].map((link) => (
-            <a 
-              key={link} 
-              href="#" 
-              className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
-            >
-              {link}
-            </a>
-          ))}
+          <a 
+            href="mailto:anshuxinha@gmail.com"
+            className="text-[10px] font-bold uppercase tracking-widest text-on-surface-variant hover:text-primary transition-colors"
+          >
+            Support
+          </a>
         </div>
       </div>
     </footer>

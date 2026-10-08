@@ -1,0 +1,22 @@
+# Stroma
+
+> Stroma is a Community Medicine app for MBBS students and residents. It is the short-notes layer for the syllabus colleges teach from K. Park's Textbook of Preventive and Social Medicine. It does not distribute that textbook.
+
+Stroma is published by Bottlegram Health (Anshuman Sinha). The public site is https://bottlegramhealth.in/. The iPhone and iPad app is free to download on the India App Store, with Pro as an in-app purchase.
+
+## Notes
+
+- [Concept of health and disease](https://bottlegramhealth.in/notes/concept-of-health-and-disease/): definitions, triad, iceberg, levels of prevention
+- [Pearl index](https://bottlegramhealth.in/notes/pearl-index/): formula and a worked example
+- [Screening calculations](https://bottlegramhealth.in/notes/screening-sensitivity-specificity/): sensitivity, specificity, PPV, NPV
+- [Park, Marrow, review books, and Stroma](https://bottlegramhealth.in/notes/community-medicine-apps-mbbs-md/): MBBS and MD comparison
+- [Park textbook notes for MBBS](https://bottlegramhealth.in/notes/park-textbook-alternative/): what Park is for, what short notes are for, and what Stroma includes
+- [How to study Community Medicine](https://bottlegramhealth.in/notes/how-to-study-community-medicine/): revision order before a prof
+- [PSM topics for MBBS exams](https://bottlegramhealth.in/notes/psm-topics-for-mbbs-exams/): the topic map, without copied tables or doses
+- [Pricing](https://bottlegramhealth.in/pricing.md): India App Store prices checked 8 October 2026
+
+## Product
+
+- [Home](https://bottlegramhealth.in/)
+- [India App Store listing](https://apps.apple.com/in/app/stroma-app/id6767763106)
+- [Privacy](https://bottlegramhealth.in/privacy)

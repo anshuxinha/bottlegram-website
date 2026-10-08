@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sensitivity, specificity, PPV and NPV with a worked table | Stroma</title>
+  <meta name="description" content="A Community Medicine screening table you can recalculate: sensitivity, specificity, positive predictive value, and why PPV falls when prevalence is low." />
+  <link rel="canonical" href="https://bottlegramhealth.in/notes/screening-sensitivity-specificity/" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
+  <link rel="stylesheet" href="/notes/notes.css" />
+  <meta property="og:title" content="Sensitivity, specificity, PPV and NPV" />
+  <meta property="og:url" content="https://bottlegramhealth.in/notes/screening-sensitivity-specificity/" />
+  <meta property="og:image" content="https://bottlegramhealth.in/logo.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Sensitivity, specificity, PPV and NPV with a worked table",
+    "datePublished": "2026-10-08",
+    "dateModified": "2026-10-08",
+    "image": "https://bottlegramhealth.in/logo.png",
+    "author": { "@type": "Person", "name": "Dr. Anshuman Sinha" },
+    "publisher": { "@type": "Organization", "name": "Bottlegram Health", "logo": { "@type": "ImageObject", "url": "https://bottlegramhealth.in/logo.png" } },
+    "mainEntityOfPage": "https://bottlegramhealth.in/notes/screening-sensitivity-specificity/"
+  }
+  </script>
+</head>
+<body>
+  <div class="wrap">
+    <header class="site">
+      <a class="brand" href="/"><img src="/logo.png" alt="" /> Stroma</a>
+      <nav class="site"><a href="/notes/">Notes</a><a href="/">Home</a></nav>
+    </header>
+    <p class="crumbs"><a href="/">Home</a> / <a href="/notes/">Notes</a> / Screening</p>
+    <p class="kicker">Epidemiology calculation</p>
+    <h1>Sensitivity, specificity, and predictive value</h1>
+    <p class="updated">Updated 8 October 2026. Written by Dr. Anshuman Sinha. The table is a teaching example, not the result of a real programme.</p>
+    <p>Screening questions punish students who memorise "sensitivity is how good the test is" and then cannot fill a table. The four numbers answer different questions. Sensitivity and specificity describe the test. Predictive values describe what a result means in a particular population. That distinction is the whole MD follow-up, and it is already enough for an MBBS long answer.</p>
+
+    <h2>The table</h2>
+    <p>One thousand people are tested. One hundred of them have the disease. The test calls 90 of those 100 positive, and it calls 80 healthy people positive.</p>
+    <table>
+      <thead>
+        <tr><th></th><th>Disease present</th><th>Disease absent</th><th>Total</th></tr>
+      </thead>
+      <tbody>
+        <tr><th>Test positive</th><td>90 (true positive)</td><td>80 (false positive)</td><td>170</td></tr>
+        <tr><th>Test negative</th><td>10 (false negative)</td><td>820 (true negative)</td><td>830</td></tr>
+        <tr><th>Total</th><td>100</td><td>900</td><td>1,000</td></tr>
+      </tbody>
+    </table>
+
+    <h2>Calculate each one</h2>
+    <ul>
+      <li><strong>Sensitivity</strong> = true positives ÷ everyone with disease = 90 ÷ 100 = 90%. Of the people who have the disease, 90% are caught. The 10 missed people are why a sensitive test is still not a promise.</li>
+      <li><strong>Specificity</strong> = true negatives ÷ everyone without disease = 820 ÷ 900 = 91.1%. Of the healthy people, about 91% are correctly left alone.</li>
+      <li><strong>Positive predictive value</strong> = true positives ÷ everyone who tested positive = 90 ÷ 170 = 52.9%. A positive result is right only about half the time in this population.</li>
+      <li><strong>Negative predictive value</strong> = true negatives ÷ everyone who tested negative = 820 ÷ 830 = 98.8%. A negative result is rarely a miss here.</li>
+      <li><strong>Prevalence</strong> = 100 ÷ 1,000 = 10%. You need this before you interpret the predictive values.</li>
+    </ul>
+    <p>Notice that sensitivity did not use the 80 false positives, and specificity did not use the 10 false negatives. If your formula reaches into the other column, you have swapped the definition.</p>
+
+    <h2>Why the same test looks worse in a rarer disease</h2>
+    <p>Keep sensitivity at 90% and specificity at 91.1%, and drop the disease to 10 people in 1,000 instead of 100.</p>
+    <ul>
+      <li>True positives ≈ 9. False negatives ≈ 1.</li>
+      <li>Healthy people = 990. False positives = 80 ÷ 900 × 990 = 88. True negatives = 902.</li>
+      <li>Positive predictive value = 9 ÷ 97, about 9.3%.</li>
+    </ul>
+    <p>The test did not get worse. The population got rarer, so most positive results are now healthy people. This is why a screening test that looked useful in a hospital clinic can flood a primary-health-centre camp with false alarms. Secondary prevention still wants the test, but only if you can confirm the positives. Screening without a confirmatory path is how a camp creates patients it cannot treat.</p>
+    <p>Prevalence drives predictive value. It does not drive sensitivity or specificity. If an answer says "PPV is a property of the test alone," it is wrong.</p>
+
+    <h2>Where this sits in the subject</h2>
+    <p>Screening is secondary prevention: the disease has started, and you are finding it early. That placement is in <a href="/notes/concept-of-health-and-disease/">concept of health and disease</a>. A test used after symptoms start is a diagnostic test, not a screening test, even if the arithmetic is identical. Say which one the question asked for.</p>
+    <p>Stroma's epidemiology gems include this matrix next to the calculators. Use the app when you want another table to punch in. Use this page when you want to see one table done in full.</p>
+    <p><a class="cta" href="https://apps.apple.com/in/app/stroma-app/id6767763106">Use the biostatistics tools</a></p>
+    <footer class="site"><p>Round 820 ÷ 900 as 91.1% only after you have shown the fraction. Examiners mark the fraction.</p></footer>
+  </div>
+</body>
+</html>
