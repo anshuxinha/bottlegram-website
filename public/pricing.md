@@ -1,11 +1,14 @@
 # Stroma pricing
 
-Checked on the India App Store listing on 8 October 2026. Apple can change these figures. Confirm them on the listing before you pay: https://apps.apple.com/in/app/stroma-app/id6767763106
+India App Store prices on 8 October 2026. The Play Store listing can differ.
+
+- App Store: https://tinyurl.com/appstroma
+- Google Play: https://tinyurl.com/playstroma
 
 ## Free download
 
-- Price: ₹0
-- Includes: the Stroma app for iPhone and iPad (iOS 15.1 or later)
+- Price: ₹0 on the App Store listing that day
+- The app is on iPhone, iPad, and Android
 
 ## In-app purchases
 
@@ -14,4 +17,4 @@ Checked on the India App Store listing on 8 October 2026. Apple can change these
 - Discount yearly subscription: ₹1,499
 - Lifetime Pro Access: ₹11,000
 
-The store listing does not spell out, line by line, which library chapters sit behind Pro. Treat the paid tier as access beyond the free download, and read the purchase sheet in the app before you subscribe.
+The listing does not say, chapter by chapter, which notes sit behind Pro. The purchase sheet in the app is where that is shown.

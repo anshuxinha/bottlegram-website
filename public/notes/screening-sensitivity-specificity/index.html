@@ -34,10 +34,13 @@
     <p class="crumbs"><a href="/">Home</a> / <a href="/notes/">Notes</a> / Screening</p>
     <p class="kicker">Epidemiology calculation</p>
     <h1>Sensitivity, specificity, and predictive value</h1>
-    <p class="updated">Updated 8 October 2026. Written by Dr. Anshuman Sinha. The table is a teaching example, not the result of a real programme.</p>
-    <p>Screening questions punish students who memorise "sensitivity is how good the test is" and then cannot fill a table. The four numbers answer different questions. Sensitivity and specificity describe the test. Predictive values describe what a result means in a particular population. That distinction is the whole MD follow-up, and it is already enough for an MBBS long answer.</p>
+    <p class="updated">8 October 2026. Dr. Anshuman Sinha. The table below is a teaching example.</p>
 
-    <h2>The table</h2>
+    <h2>What do sensitivity and specificity mean?</h2>
+    <p>Sensitivity is the ability of a test to pick up people who have the disease. It is the true positives divided by everyone with the disease. Specificity is the ability of the test to leave healthy people alone. It is the true negatives divided by everyone without the disease. Those two describe the test.</p>
+    <p>Predictive values describe a result in a particular population. The positive predictive value is the chance that a person with a positive test actually has the disease. The negative predictive value is the chance that a person with a negative test does not. Prevalence changes the predictive values. It does not change sensitivity or specificity.</p>
+
+    <h2>A 2-by-2 table</h2>
     <p>One thousand people are tested. One hundred of them have the disease. The test calls 90 of those 100 positive, and it calls 80 healthy people positive.</p>
     <table>
       <thead>
@@ -50,31 +53,34 @@
       </tbody>
     </table>
 
-    <h2>Calculate each one</h2>
+    <h2>How do you calculate each one?</h2>
     <ul>
-      <li><strong>Sensitivity</strong> = true positives ÷ everyone with disease = 90 ÷ 100 = 90%. Of the people who have the disease, 90% are caught. The 10 missed people are why a sensitive test is still not a promise.</li>
-      <li><strong>Specificity</strong> = true negatives ÷ everyone without disease = 820 ÷ 900 = 91.1%. Of the healthy people, about 91% are correctly left alone.</li>
-      <li><strong>Positive predictive value</strong> = true positives ÷ everyone who tested positive = 90 ÷ 170 = 52.9%. A positive result is right only about half the time in this population.</li>
-      <li><strong>Negative predictive value</strong> = true negatives ÷ everyone who tested negative = 820 ÷ 830 = 98.8%. A negative result is rarely a miss here.</li>
-      <li><strong>Prevalence</strong> = 100 ÷ 1,000 = 10%. You need this before you interpret the predictive values.</li>
+      <li><strong>Sensitivity</strong> = 90 ÷ 100 = 90%. Of the people with the disease, 90% are caught.</li>
+      <li><strong>Specificity</strong> = 820 ÷ 900 = 91.1%. Of the healthy people, about 91% are correctly called negative. Show the fraction before the rounded percent.</li>
+      <li><strong>Positive predictive value</strong> = 90 ÷ 170 = 52.9%. In this population a positive result is right about half the time.</li>
+      <li><strong>Negative predictive value</strong> = 820 ÷ 830 = 98.8%.</li>
+      <li><strong>Prevalence</strong> = 100 ÷ 1,000 = 10%.</li>
     </ul>
-    <p>Notice that sensitivity did not use the 80 false positives, and specificity did not use the 10 false negatives. If your formula reaches into the other column, you have swapped the definition.</p>
+    <p>Sensitivity does not use the false positives, and specificity does not use the false negatives. If a formula reaches into the other column, the definition has been swapped.</p>
 
-    <h2>Why the same test looks worse in a rarer disease</h2>
-    <p>Keep sensitivity at 90% and specificity at 91.1%, and drop the disease to 10 people in 1,000 instead of 100.</p>
+    <h2>Why does the same test look worse when the disease is rare?</h2>
+    <p>Keep sensitivity at 90% and specificity at 91.1%, and suppose only 10 of 1,000 people have the disease.</p>
     <ul>
-      <li>True positives ≈ 9. False negatives ≈ 1.</li>
+      <li>True positives are about 9. False negatives are about 1.</li>
       <li>Healthy people = 990. False positives = 80 ÷ 900 × 990 = 88. True negatives = 902.</li>
       <li>Positive predictive value = 9 ÷ 97, about 9.3%.</li>
     </ul>
-    <p>The test did not get worse. The population got rarer, so most positive results are now healthy people. This is why a screening test that looked useful in a hospital clinic can flood a primary-health-centre camp with false alarms. Secondary prevention still wants the test, but only if you can confirm the positives. Screening without a confirmatory path is how a camp creates patients it cannot treat.</p>
-    <p>Prevalence drives predictive value. It does not drive sensitivity or specificity. If an answer says "PPV is a property of the test alone," it is wrong.</p>
+    <p>The test is unchanged. Most positive results are now healthy people, because the disease is uncommon. A test that looked useful in a hospital clinic can fill a camp with false alarms. Screening is still worth doing when the positives can be confirmed.</p>
 
-    <h2>Where this sits in the subject</h2>
-    <p>Screening is secondary prevention: the disease has started, and you are finding it early. That placement is in <a href="/notes/concept-of-health-and-disease/">concept of health and disease</a>. A test used after symptoms start is a diagnostic test, not a screening test, even if the arithmetic is identical. Say which one the question asked for.</p>
-    <p>Stroma's epidemiology gems include this matrix next to the calculators. Use the app when you want another table to punch in. Use this page when you want to see one table done in full.</p>
-    <p><a class="cta" href="https://apps.apple.com/in/app/stroma-app/id6767763106">Use the biostatistics tools</a></p>
-    <footer class="site"><p>Round 820 ÷ 900 as 91.1% only after you have shown the fraction. Examiners mark the fraction.</p></footer>
+    <h2>Where does screening sit among the levels of prevention?</h2>
+    <p>Screening is secondary prevention: the disease has started, and the aim is to find it early. That placement is on the <a href="/notes/concept-of-health-and-disease/">concept of health and disease</a> page. A test used after symptoms have started is a diagnostic test, even when the arithmetic is the same.</p>
+    <h2>Where to read the rest</h2>
+    <p>More tables, and the calculators that take a new set of numbers, are in Stroma.</p>
+    <p class="store-links">
+      <a class="cta" href="https://tinyurl.com/appstroma">Download on the App Store</a>
+      <a class="cta" href="https://tinyurl.com/playstroma">Download on Google Play</a>
+    </p>
+    <footer class="site"><p>Show the fraction in the answer, then the percent.</p></footer>
   </div>
 </body>
 </html>

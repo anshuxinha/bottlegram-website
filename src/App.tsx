@@ -19,7 +19,8 @@ import {
 } from "lucide-react";
 import { useState, useEffect } from "react";
 
-const APP_STORE_URL = "https://apps.apple.com/in/app/stroma-app/id6767763106";
+const APP_STORE_URL = "https://tinyurl.com/appstroma";
+const PLAY_STORE_URL = "https://tinyurl.com/playstroma";
 
 const navLinks = [
   { label: "Notes", href: "/notes/" },
@@ -78,7 +79,7 @@ const Navbar = () => {
           <a href="mailto:anshuxinha@gmail.com" className="text-sm font-medium text-on-surface hover:text-primary transition-colors">
             Contact
           </a>
-          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="primary-gradient text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:opacity-90 transition-opacity flex items-center gap-2">
+          <a href="#download" className="primary-gradient text-on-primary px-6 py-2.5 rounded-full text-sm font-semibold shadow-lg hover:opacity-90 transition-opacity flex items-center gap-2">
             Get the app
             <Download size={16} />
           </a>
@@ -116,7 +117,7 @@ const Navbar = () => {
           <a href="mailto:anshuxinha@gmail.com" className="text-lg font-medium text-on-surface" onClick={() => setIsMobileMenuOpen(false)}>
             Contact
           </a>
-          <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="primary-gradient text-on-primary px-6 py-3 rounded-full text-center font-semibold mt-2">
+          <a href="#download" className="primary-gradient text-on-primary px-6 py-3 rounded-full text-center font-semibold mt-2" onClick={() => setIsMobileMenuOpen(false)}>
             Get the app
           </a>
         </motion.div>
@@ -141,26 +142,28 @@ const Hero = () => {
             <span className="text-primary italic">MD.</span>
           </h1>
           <p className="text-lg text-on-surface-variant max-w-lg mb-10 leading-relaxed">
-            Stroma is the Community Medicine app for undergraduate exams and for the residency. The same library holds short notes and long answers for MBBS, and a resident course, survey tools, and calculators for MD.
+            Stroma is a Community Medicine app for the MBBS years and for the residency. Undergraduates get short notes and long answers. Residents get a course, survey tools, and biostatistics calculators, on the same library.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 mb-12">
+          <div className="flex flex-col sm:flex-row gap-4 mb-6">
             <a
               href={APP_STORE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="primary-gradient text-on-primary px-8 py-4 rounded-full font-semibold shadow-xl hover:scale-105 transition-transform text-center"
             >
-              Get Stroma on the App Store
+              App Store
             </a>
-            <a 
-              href="/notes/"
+            <a
+              href={PLAY_STORE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-surface-container-lowest text-on-surface px-8 py-4 rounded-full font-semibold editorial-shadow hover:bg-surface-container-low transition-colors text-center"
             >
-              Read the guides
+              Google Play
             </a>
           </div>
-          <p className="text-sm text-on-surface-variant max-w-lg leading-relaxed">
-            Free to download. Pro access is an in-app purchase. Rated 5.0 from 17 ratings on the India App Store, checked 8 October 2026.
+          <p className="text-sm text-on-surface-variant">
+            <a href="/notes/" className="text-primary font-semibold hover:underline">Or read a few guides first</a>
           </p>
         </motion.div>
 
@@ -235,19 +238,19 @@ const Features = () => {
     {
       icon: <BookOpen className="text-primary" />,
       title: "A library for both stages",
-      description: "MBBS gets short notes, long answers, and exam tips. MD gets a resident course on top of the same Community Medicine library.",
+      description: "Short notes, long answers, and exam tips for MBBS. A resident course for MD, using the same Community Medicine chapters.",
       bgColor: "bg-purple-50"
     },
     {
       icon: <LayoutDashboard className="text-primary" />,
-      title: "Real-time Dashboard Updates",
-      description: "Stay current with live updates on global health guidelines, WHO statistics, and local public health notifications.",
+      title: "Guideline and survey notes",
+      description: "Programme notes and survey comparisons live with the chapters, including NFHS-5 set next to NFHS-6.",
       bgColor: "bg-indigo-50"
     },
     {
       icon: <Users className="text-primary" />,
-      title: "Live Community Health Webinars",
-      description: "Integrated expert-led webinars that bridge the gap between theoretical study and community practice.",
+      title: "Sessions with people who teach it",
+      description: "Occasional classes with public health teachers, including the BCBR session listed further down.",
       bgColor: "bg-blue-50"
     }
   ];
@@ -288,17 +291,17 @@ const TextbookSection = () => {
     {
       icon: <Clock className="text-primary" />,
       title: "Updates between editions",
-      description: "Park changes when a new edition is printed. The app adds notes, exam tips, and survey tools in App Store updates. The June 2026 update added an NFHS-5 and NFHS-6 comparison."
+      description: "Park moves when a new edition is printed. The app can add a survey comparison, such as NFHS-5 beside NFHS-6, without waiting for the next printing."
     },
     {
       icon: <CheckCircle2 className="text-primary" />,
       title: "MBBS answers, MD course",
-      description: "The 22 July 2026 update added short notes, long answers, and exam tips for several chapters. The 13 June 2026 update added a course for Community Medicine residents."
+      description: "Several chapters have short notes, long answers, and exam tips. Community Medicine residents also have a course on the same library."
     },
     {
       icon: <Globe className="text-primary" />,
       title: "Biostatistics on the phone",
-      description: "Calculators sit next to the notes, so a formula is not stuck in a chapter you cannot find during a posting."
+      description: "The calculators sit with the notes, which helps when a posting asks for a sensitivity or a Pearl index and the book is in the hostel."
     }
   ];
 
@@ -326,7 +329,7 @@ const TextbookSection = () => {
             Undergraduates and residents use it differently.
           </h2>
           <p className="text-on-surface-variant leading-relaxed mb-12">
-            If you are in MBBS, the college book is still Park, and the short notes are the way through a prof. If you are in MD Community Medicine, the resident course and the survey tools sit on the same library. <a href="/notes/community-medicine-apps-mbbs-md/" className="text-primary font-semibold hover:underline">See how that compares with Park, Marrow, and the review books</a>.
+            In MBBS the college book is still Park, and the short notes are what you revise from when the paper is close. In MD Community Medicine the resident course and the survey tools are on that same library. <a href="/notes/community-medicine-apps-mbbs-md/" className="text-primary font-semibold hover:underline">Here is how that sits next to Park, Marrow, and the review books</a>.
           </p>
           <div className="space-y-10">
             {points.map((point, idx) => (
@@ -359,7 +362,7 @@ const ExpertsSection = () => {
             Learn from public health experts.
           </h2>
           <p className="text-lg text-on-surface-variant mb-12 leading-relaxed">
-            Join live sessions with field practitioners and researchers who bring textbook theories to life through real-world case studies.
+            Some of the teaching happens live, with the people who take the classes, rather than only inside the notes.
           </p>
           
           <motion.div 
@@ -407,6 +410,7 @@ const CTASection = () => {
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
+        id="download"
         className="max-w-7xl mx-auto primary-gradient rounded-[3rem] p-12 md:p-24 text-center text-on-primary relative overflow-hidden"
       >
         <div className="relative z-10">
@@ -414,11 +418,14 @@ const CTASection = () => {
             Community Medicine <br className="hidden md:block" /> for the exam in front of you.
           </h2>
           <p className="text-xl text-on-primary/80 mb-12 max-w-2xl mx-auto">
-            Get the Stroma library on iPhone and iPad. The download is free. Pro access, including the longer notes, is an in-app purchase.
+            The guides on this site are a sample of the library. The rest of the chapters are in the app, on iPhone, iPad, and Android.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a href={APP_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
-              Get Stroma on the App Store
+              App Store
+            </a>
+            <a href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer" className="bg-surface-container-lowest text-primary px-10 py-5 rounded-full font-bold shadow-2xl hover:scale-105 transition-transform">
+              Google Play
             </a>
             <a 
               href="mailto:anshuxinha@gmail.com"

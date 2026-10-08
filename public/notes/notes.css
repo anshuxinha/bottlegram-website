@@ -117,9 +117,15 @@ th, td {
 
 th { background: #fff; }
 
+.store-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
 .cta {
   display: inline-block;
-  margin-top: 0.5rem;
   background: linear-gradient(135deg, #8319da 0%, #a855f7 100%);
   color: var(--on-primary);
   text-decoration: none;
